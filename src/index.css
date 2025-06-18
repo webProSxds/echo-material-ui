@@ -1,0 +1,23 @@
+:root {
+  --secondary-color: #009ddc;
+  --primary: #0065c1;
+  --primary-dark: #23486a;
+  --secondary: #efeeea;
+  --light: #ffffff;
+  --secondary-two: #f8f8f8;
+  --accent-two: #0d6efd;
+  --accent-color: #4cc9f0;
+  --dark-color: #212529;
+  --unread-bg: #f0f4ff;
+  --light-color: #f8f9fa;
+  --light: #FFFFFF;
+}
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}

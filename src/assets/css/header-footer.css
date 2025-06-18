@@ -1,0 +1,59 @@
+ 
+.navbar-brand {
+    font-weight: 700;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary);
+}
+
+.bg-primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.text-primary-custom {
+    color: var(--primary);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.btn-primary-custom-header {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    font-weight: 500;
+    padding: 12px 24px;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-dark);
+    color: var(--light);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    font-weight: 500;
+    padding: 12px 24px;
+}
+
+.btn-accent:hover {
+    background-color: #e66a3a;
+    color: var(--light);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 500;
+    padding: 10px 22px;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+

@@ -1,0 +1,145 @@
+
+.wrapper-login {
+    background: linear-gradient(86deg, rgba(0, 157, 220, 1) 0%, rgba(0, 101, 193, 1) 100%);
+}
+.auth-container {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin: 20px;
+}
+
+.brand-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-logo span {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.brand-logo .primary {
+    color: var(--primary);
+}
+
+.brand-logo .dark {
+    color: var(--primary-dark);
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(59, 103, 144, 0.25);
+}
+
+.btn-primary-custom {
+    background-color: #0065C1;
+    color: var(--light);
+    border: none;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-dark);
+    color: var(--light);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.divider-text {
+    padding: 0 10px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.social-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.social-btn i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.password-container {
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+    
+    .social-login {
+        flex-direction: column;
+    }
+}
