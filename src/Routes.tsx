@@ -22,20 +22,20 @@ const AppRoutes = () => {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<LoginPage />} />
-          <Route path='/signup' element={<SignupPage />} />
-          <Route path='/home' element={<HomePage />} />
-          <Route path='/add-job' element={<AddJobPage />} />
-          <Route path='/add-skills' element={<AddSkillsPage />} />
-          <Route path='/advisory-profile' element={<AdvisoryProfilePage />} />
-          <Route path='/dashboard' element={<DashBoardPage />} />
-          <Route path='/dashboard-advisor' element={<DashBoardAdvisorPage />} />
-          <Route path='/job-posting' element={<JobPostingPage />} />
-          <Route path='/notification-details' element={<NotificationDetailsPage />} />
-          <Route path='/notification' element={<NotificationPage />} />
-          <Route path='/payment' element={<PaymentPage />} />
-          <Route path='/pricing' element={<PricingPage />} />
-          <Route path='/search-delegators' element={<SearchDelegatorsPage />} />
+          <Route path='/echo-material-ui/' element={<LoginPage />} />
+          <Route path='/echo-material-ui/signup' element={<SignupPage />} />
+          <Route path='/echo-material-ui/home' element={<HomePage />} />
+          <Route path='/echo-material-ui/add-job' element={<AddJobPage />} />
+          <Route path='/echo-material-ui/add-skills' element={<AddSkillsPage />} />
+          <Route path='/echo-material-ui/advisory-profile' element={<AdvisoryProfilePage />} />
+          <Route path='/echo-material-ui/dashboard' element={<DashBoardPage />} />
+          <Route path='/echo-material-ui/dashboard-advisor' element={<DashBoardAdvisorPage />} />
+          <Route path='/echo-material-ui/job-posting' element={<JobPostingPage />} />
+          <Route path='/echo-material-ui/notification-details' element={<NotificationDetailsPage />} />
+          <Route path='/echo-material-ui/notification' element={<NotificationPage />} />
+          <Route path='/echo-material-ui/payment' element={<PaymentPage />} />
+          <Route path='/echo-material-ui/pricing' element={<PricingPage />} />
+          <Route path='/echo-material-ui/search-delegators' element={<SearchDelegatorsPage />} />
         </Routes>
       </Router>
     </>
