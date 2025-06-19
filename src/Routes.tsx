@@ -18,8 +18,6 @@ import PricingPage from './pages/Pricing';
 import SearchDelegatorsPage from './pages/SearchDelegators';
 
 const AppRoutes = () => {
-  const baseRoute = process.env.REACT_APP_BASE_ROUTE || '/'; // Default to '/' if not defined
-console.log("basepath 1.1",baseRoute);
   return (
     <>
       <Router basename='/echo-material-ui'>
