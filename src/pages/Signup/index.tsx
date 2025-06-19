@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/common/header-footer/footer';
 import Header from '../../components/common/header-footer/header';
+import { Button, Radio} from 'echo-core-lib';
+import { useState } from 'react';
+import { InputPassword } from '../../shared/InputPassword';
 
 const SignUpPage = () => {
+      const [selectedValue, setSelectedValue] = useState("Delegator");
   return (
     <div className="wrapper-login">
       <Header />
@@ -15,33 +19,31 @@ const SignUpPage = () => {
           <h2 className='text-center mb-4'>Create your account</h2>
 
           <div className='social-login'>
-            <button className='social-btn'>
-              <div className='form-check'>
-                <input
+            <Button className='social-btn' element={<><div className='form-check'>
+                <Radio
                   className='form-check-input'
-                  type='radio'
-                  name='flexRadioDefault'
+                  namez='flexRadioDefault'
+                  classNameLable='form-check-label' htmlFor='flexRadioDefault1'
+                  text="Advisor"
+                  value="Advisor"
                   id='flexRadioDefault1'
+                  ischecked={ selectedValue === 'Advisor'}
+                  handler={setSelectedValue}
                 />
-                <label className='form-check-label' htmlFor='flexRadioDefault1'>
-                  Advisor
-                </label>
-              </div>
-            </button>
-            <button className='social-btn'>
-              <div className='form-check'>
-                <input
+              </div></>} />
+            <Button className='social-btn' element={<>  <div className='form-check'>
+              <Radio
                   className='form-check-input'
-                  type='radio'
-                  name='flexRadioDefault'
+                  namez='flexRadioDefault'
+                  classNameLable='form-check-label'
                   id='flexRadioDefault2'
-                  checked
+                  htmlFor='flexRadioDefault2'
+                  text="Delegator"
+                  value="Delegator"
+                  ischecked={ selectedValue === 'Delegator'}
+                  handler={setSelectedValue}
                 />
-                <label className='form-check-label' htmlFor='flexRadioDefault2'>
-                  Delegator
-                </label>
-              </div>
-            </button>
+              </div></>}/>
           </div>
 
           <div className='divider'>
@@ -78,32 +80,18 @@ const SignUpPage = () => {
               required
             />
 
-            <div className='password-container'>
-              <input
-                type='password'
+              <InputPassword
                 className='form-control'
                 id='password'
                 placeholder='Password'
-                required
+                handler={()=>{}}
               />
-              <span className='password-toggle' id='togglePassword'>
-                <i className='far fa-eye'></i>
-              </span>
-            </div>
-
-            <div className='password-container'>
-              <input
-                type='password'
+              <InputPassword
                 className='form-control'
                 id='confirmPassword'
                 placeholder='Confirm password'
-                required
+                handler={()=>{}}
               />
-              <span className='password-toggle' id='toggleConfirmPassword'>
-                <i className='far fa-eye'></i>
-              </span>
-            </div>
-
             <div className='form-check mb-4'>
               <input className='form-check-input' type='checkbox' id='termsCheck' required />
               <label className='form-check-label' htmlFor='termsCheck'>
@@ -118,18 +106,11 @@ const SignUpPage = () => {
               </label>
             </div>
             <div className='social-login'>
-              <button className='social-btn'>
-                <i className='fab fa-google'></i> Google
-              </button>
-              <button className='social-btn'>
-                <i className='fab fa-linkedin'></i> LinkedIn
-              </button>
+              <Button className='social-btn' element={<><i className='fab fa-google'></i> Google</>}/>
+              <Button className='social-btn' element={<><i className='fab fa-linkedin'></i> LinkedIn</>} />
             </div>
-            <button type='submit' className='btn btn-primary-custom mb-3'>
-              Sign Up
-            </button>
+            <Button type='submit' className='btn btn-primary-custom mb-3' text='Sign Up'/>
           </form>
-
           <div className='auth-footer'>
             Already have an account? <Link to="/">Sign in</Link>
           </div>

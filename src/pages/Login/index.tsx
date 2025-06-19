@@ -2,6 +2,7 @@ import Footer from '../../components/common/header-footer/footer';
 import '../../assets/css/sign-up-log-in.css';
 import Header from '../../components/common/header-footer/header';
 import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'echo-core-lib';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -42,16 +43,11 @@ const LoginPage = () => {
               </span>
             </div>
             <div className='social-login'>
-              <button className='social-btn'>
-                <i className='fab fa-google'></i> Google
-              </button>
-              <button className='social-btn'>
-                <i className='fab fa-linkedin'></i> LinkedIn
-              </button>
+              <Button className='social-btn' element={<><i className='fab fa-google'></i> Google</>} />
+              <Button className='social-btn' element={<> <i className='fab fa-linkedin'></i> LinkedIn</>} />
             </div>
-            <button type='submit' className='btn btn-primary-custom mb-3' onClick={handleLogin}>
-              Sign in
-            </button>
+            <Button text='Sign in' type='submit' className='btn btn-primary-custom mb-3' handler={handleLogin} />
+              
           </form>
 
           <div className='auth-footer'>

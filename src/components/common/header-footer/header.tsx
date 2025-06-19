@@ -31,8 +31,8 @@ const Header = ()=>{
                     </li>
                 </ul>
                 <div className="ms-lg-3 mt-3 mt-lg-0">
-                    <Link className="btn btn-outline-custom me-2" style={{ borderRadius: '30px' }}  to="/signup">Login</Link>
-                    <Link className="btn btn-outline-custom me-2" style={{ borderRadius: '30px' }}  to="/">Sign Up</Link>
+                    <Link className="btn btn-outline-custom me-2" style={{ borderRadius: '30px' }}  to="/">Login</Link>
+                    <Link className="btn btn-outline-custom me-2" style={{ borderRadius: '30px' }}  to="/signup">Sign Up</Link>
                 </div>
             </div>
         </div>
