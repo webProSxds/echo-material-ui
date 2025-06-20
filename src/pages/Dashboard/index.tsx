@@ -1,22 +1,15 @@
 import '../../assets/css/dashboard.css';
 import img2 from '../../assets/img/img2.png';
-import img3 from '../../assets/img/img3.png';
 import { AcitivityCard, DelegatorCard } from 'echo-core-lib';
-// import { DelegatorCard } from '../../shared/DelegatorCard';
+import { ProfileHeader } from '../../shared/ProfileHeader';
 
 const DashBoardPage = () => {
   return (
     <>
       <div className='container'>
-        <div className='profile-header p-4 mb-4'>
-          <div className='row align-items-center'>
-            <div className='col-md-12 text-center text-md-start'>
-              <h2 className='mb-1'>Welcome, Viren Sree!</h2>
-              <p>Here's what's happening with your account today</p>
-            </div>
-          </div>
-        </div>
-
+        {
+          <ProfileHeader userName={"Viren Sree!"}  desc={`Here's what's happening with your account today`}/>
+        }
         <div className='row mb-4 top-cards'>
           <div className='col-md-4 mb-3 mb-md-0'>
             <div className='dashboard-card one'>
