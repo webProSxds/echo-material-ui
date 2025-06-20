@@ -2,8 +2,7 @@ import Footer from '../../components/common/header-footer/footer';
 import '../../assets/css/sign-up-log-in.css';
 import Header from '../../components/common/header-footer/header';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button } from 'echo-core-lib';
-import { InputPassword } from '../../shared/InputPassword';
+import { Button, InputPassword } from 'echo-core-lib';
 import { useState } from 'react';
 
 const LoginPage = () => {
