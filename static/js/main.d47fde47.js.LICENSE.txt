@@ -20,7 +20,7 @@
 
 /**
  * @license React
- * react-jsx-runtime.production.js
+ * react-jsx-runtime.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -30,7 +30,7 @@
 
 /**
  * @license React
- * react.development.js
+ * react-jsx-runtime.production.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
