@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/common/header-footer/footer';
 import Header from '../../components/common/header-footer/header';
-import { Button, Radio} from 'echo-core-lib';
+import { Button, Radio, InputPassword} from 'echo-core-lib';
 import { useState } from 'react';
-import { InputPassword } from '../../shared/InputPassword';
+ 
 
 const SignUpPage = () => {
       const [selectedValue, setSelectedValue] = useState("Delegator");
@@ -53,22 +53,10 @@ const SignUpPage = () => {
           <form id='signupForm'>
             <div className='row'>
               <div className='col-md-6 mb-3'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='firstName'
-                  placeholder='First name'
-                  required
-                />
+ 
               </div>
               <div className='col-md-6 mb-3'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='lastName'
-                  placeholder='Last name'
-                  required
-                />
+         
               </div>
             </div>
 
