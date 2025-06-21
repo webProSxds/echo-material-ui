@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/common/header-footer/footer';
 import Header from '../../components/common/header-footer/header';
-import { Button, Radio, InputPassword} from 'echo-core-lib';
+import { Button, Radio, } from 'echo-core-lib';
 import { useState } from 'react';
+import { InputPassword } from '../../shared/InputPassword';
  
 
 const SignUpPage = () => {
@@ -60,12 +61,13 @@ const SignUpPage = () => {
               </div>
             </div>
 
-            <input
+            <InputPassword
               type='email'
               className='form-control'
               id='email'
               placeholder='Email address'
               required
+              handler={()=>{}}
             />
 
               <InputPassword
@@ -73,12 +75,14 @@ const SignUpPage = () => {
                 id='password'
                 placeholder='Password'
                 handler={()=>{}}
+                showEye
               />
               <InputPassword
                 className='form-control'
                 id='confirmPassword'
                 placeholder='Confirm password'
                 handler={()=>{}}
+                showEye
               />
             <div className='form-check mb-4'>
               <input className='form-check-input' type='checkbox' id='termsCheck' required />

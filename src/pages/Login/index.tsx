@@ -2,8 +2,9 @@ import Footer from '../../components/common/header-footer/footer';
 import '../../assets/css/sign-up-log-in.css';
 import Header from '../../components/common/header-footer/header';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button, InputPassword } from 'echo-core-lib';
+import { Button } from 'echo-core-lib';
 import { useState } from 'react';
+import { InputPassword } from '../../shared/InputPassword';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -84,6 +85,8 @@ const LoginPage = () => {
               id='password'
               placeholder='Password'
               handler={() => {}}
+              type='password'
+              showEye
             />
             <div className='social-login'>
               <Button
