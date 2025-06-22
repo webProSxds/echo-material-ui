@@ -4,6 +4,9 @@ import { AcitivityCard, DelegatorCard } from 'echo-core-lib';
 import { ProfileHeader } from '../../shared/ProfileHeader';
 import { Heading } from '../../shared/Heading';
 import { DashBoardCard } from '../../shared/DashBoardCard';
+import { useEffect, useState } from 'react';
+
+const path = 'https://echo-api-y6n3.onrender.com';
 
 const DashBoardPage = () => {
   const dashBoardData = [
@@ -54,30 +57,23 @@ const DashBoardPage = () => {
       skills: 'Java',
     },
   ];
-  const skillsData = [
-    {
-      path: img2,
-      username: 'siva',
-      skills: 'Phyotn',
-    },
-    {
-      path: img2,
-      username: 'siva',
-      skills: 'Phyotn',
-    },
-    {
-      path: img2,
-      username: 'sankar',
-      skills: 'Java',
-    },
-  ];
+  const [skillsData, updateskillsData] = useState<any>([]);
+  useEffect(() => {
+    const skills = async () => {
+      const ds = await fetch(`${path}/skills`);
+      const res = await ds.json();
+      console.log('Res', res);
+      updateskillsData(res);
+    };
+    skills();
+  }, []);
   return (
     <>
       <div className='container'>
-          <ProfileHeader
-            userName={'Viren Sree!'}
-            desc={`Here's what's happening with your account today`}
-          />
+        <ProfileHeader
+          userName={'Viren Sree!'}
+          desc={`Here's what's happening with your account today`}
+        />
         <div className='row mb-4 top-cards'>
           {dashBoardData.map(item => (
             <DashBoardCard data={item} />
@@ -107,7 +103,7 @@ const DashBoardPage = () => {
             <div className='card'>
               <div className='card-body deli'>
                 <Heading title='Suggested Delegators' />
-                {skillsData.map(item => DelegatorCard(item))}
+                {skillsData.map((item: any) => DelegatorCard(item))}
               </div>
             </div>
           </div>
