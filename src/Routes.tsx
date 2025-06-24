@@ -22,9 +22,9 @@ const AppRoutes = () => {
     <>
       <Router basename='/echo-material-ui'>
         <Routes>
-          <Route path='/' element={<LoginPage />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/login' element={<LoginPage />} />
           <Route path='/signup' element={<SignupPage />} />
-          <Route path='/home' element={<HomePage />} />
           <Route path='/add-job' element={<AddJobPage />} />
           <Route path='/add-skills' element={<AddSkillsPage />} />
           <Route path='/advisory-profile' element={<AdvisoryProfilePage />} />

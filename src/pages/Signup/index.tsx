@@ -104,7 +104,7 @@ const SignUpPage = () => {
             <Button type='submit' className='btn btn-primary-custom mb-3' text='Sign Up'/>
           </form>
           <div className='auth-footer'>
-            Already have an account? <Link to="/">Sign in</Link>
+            Already have an account? <Link to="/login">Sign in</Link>
           </div>
         </div>
       </div>
